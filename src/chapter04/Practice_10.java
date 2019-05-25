@@ -24,6 +24,7 @@ public class Practice_10 {
 			System.out.println(m * n);
 	}
 	public static void main(String[] args) {
+		long startTime = System.nanoTime();
 		for(int j = 1000; j < 10000; j++) {
 			int a, b, c, d;
 			a = thousandDigit(j);
@@ -58,5 +59,7 @@ public class Practice_10 {
 			else if((d * 10 + a ) * (b * 10 + c) == j)
 				test(d * 10 + a, b * 10 + c);
 		}
+		long endTime = System.nanoTime();
+		System.out.println(startTime +" " +  endTime + " " + (endTime - startTime));
 	}
 }
